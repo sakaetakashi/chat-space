@@ -53,7 +53,7 @@ Things you may want to cover:
 **message table**
 | Column | type | Option |
 |:--|:--|:--|
-| body | text | null: false |
+| body | text | |
 | image | string | |
 | group_id | references | foreign_key: true |
 | user_id | references | foreign_key: true |
