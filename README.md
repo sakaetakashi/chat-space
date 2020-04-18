@@ -34,7 +34,7 @@ Things you may want to cover:
 
 - has_many :groups, through: :group_users
 - has_many :group_users
-- has_many :massages
+- has_many :messages
 
 ---
 
@@ -55,8 +55,8 @@ Things you may want to cover:
 |:--|:--|:--|
 | body | text | |
 | image | string | |
-| group_id | references | foreign_key: true |
-| user_id | references | foreign_key: true |
+| group_id | references | null: false, foreign_key: true |
+| user_id | references | null: false, foreign_key: true |
 **Association**
 
 - belongs_to :user
