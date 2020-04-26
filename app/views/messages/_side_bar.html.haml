@@ -1,3 +1,18 @@
-.side
-  .side_bar
-  ＜サイドバー＞
+.side__bar
+  .user__name
+    .user__box
+      %p.name__box
+        masa
+      %ul.name
+        %li.name__icon
+          = link_to "#" do
+            = icon('fa', 'edit', class:'icon')
+        %li.name__icon
+          = link_to "#" do
+            = icon('fas', 'cog', class:'icon')
+  .group__list
+    .group
+      %p.group__name
+        あ
+      %p.group__message
+        い
