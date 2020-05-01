@@ -2,7 +2,7 @@
   .user__name
     .user__box
       %p.name__box
-      = current_user.name
+        = current_user.name
       %ul.name
         %li.name__icon
           = link_to new_group_path do
@@ -13,8 +13,7 @@
   .group__list
     - current_user.groups.each do |group| 
       .group
-        = link_to '#' do
-          %p.group__name
-            = group.name
-          %p.group__message
-            メッセージはまだありません。
+        = link_to group_messages_path(group), class:"group__name" do
+          = group.name
+        %p.group__message
+          = group.show_last_message

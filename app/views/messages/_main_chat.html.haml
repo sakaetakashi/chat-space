@@ -1,21 +1,21 @@
 .chat__main
   .grup__info
     .left__box
-      %h2.curent__group インフォボックス
-      %ul.menber__list メンバーリスト
-    = link_to "#", class:"edit__btn" do
-      Edit
+      %h2.curent__group
+        %h2 #{@group.name}
+      %ul.menber__list
+        Members:
+        - @group.users.each do |user|
+          %span.chat-header__user #{user.name}
+    = link_to 'Edit', edit_group_path(@group), class: 'edit__btn'
   .messages__list
-    .message
-      .upper__info
-        %p.talker う
-        %p.date え
-      .text__info お
+    = render @messages
+
   .message__form
-    .new__message
-      .input__box
-        %input{type: "text", class: "input__box__text", placeholder: "type a message"}
-        %label{class: "input__box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input__box__image__file"}
-      %input{type: "submit", value: "Send", class: "submit__btn"}
+    .new__messages
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'input__box', placeholder: 'type a message'
+        = f.label :image, class: 'text' do
+          = icon('fas', 'image', class: 'image')
+          = f.file_field :image, class: 'file'
+        = f.submit 'Send', class: 'form__submit'
