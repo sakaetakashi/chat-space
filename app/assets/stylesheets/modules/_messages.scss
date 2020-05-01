@@ -6,6 +6,7 @@
   width: 300px;
   height: 100vh;
   float: left;
+  color: #ffffff;
   .user__name {
     height: 100px;
     width: 300px;
@@ -47,9 +48,13 @@
       .group__name {
         font-size: 15px;
         margin-bottom: 5px;
+        text-decoration: none;
+        color: #ffffff;
       }
       .group__message {
         font-size: 11px;
+        text-decoration: none;
+        color: #ffffff;
       }
     }
   }
@@ -123,42 +128,45 @@
     width: 100%;
     background-color: #d2d2d2;
     padding: 20px 40px;
-    .new__message {
-      display: flex;
-      .input__box {
-        width: 100%;
+    .new__messages {
+      .new_message {
         display: flex;
+        width: 100%;
         position: relative;
-        &__text {
-          position: relative;
-          height: 50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          background-color: #ffffff;
-          border-style: none;
-        }
-        &__image {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-          font-size: 1.3rem;
 
-          &__file {
+        .input__box {
+          width: 100%;
+          display: flex;
+        }
+        .text {
+          height: 50px;
+          padding: 0 40px 0 10px;
+          border-style: none;
+          position: absolute;
+          top: 13px;
+          right: 100px;
+
+          &__image {
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 1.3rem;
+          }
+          .file {
             display: none;
           }
         }
-      }
-      .submit__btn {
-        height: 50px;
-        width: 100px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: #38aef0;
-        color: #ffffff;
-        text-align: center;
-        line-height: 45px;
-        cursor: pointer;
+        .form__submit {
+          height: 50px;
+          width: 100px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: #ffffff;
+          text-align: center;
+          line-height: 45px;
+          cursor: pointer;
+        }
       }
     }
   }
