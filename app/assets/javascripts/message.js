@@ -56,7 +56,7 @@ $(function () {
         $(".messages__list").animate({
           scrollTop: $(".messages__list")[0].scrollHeight,
         });
-        $("form__submit").prop("disabled", false);
+        $(".form__submit").prop("disabled", false);
       })
       .fail(function () {
         alert("メッセージ送信に失敗しました");
